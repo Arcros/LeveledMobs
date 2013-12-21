@@ -1,0 +1,108 @@
+distance: 10 #Distance in-Blocks after which the level increases
+
+multiplier: 0.5 #Number to input in health algorythm
+#Algorythm: MaxHealth + (MaxHealth * (trueDistance * multiplier))
+
+expMultiplier: 0.2 #Number to input in exp algorythm
+#Algorythm: BaseDroppedExp + BaseDroppedExp * (expMultiplier * lvl)
+
+exemptedMobs: [bat, pig, chicken, squid, sheep, horse] #Here you can put all mobs that you want to exempt from the Level system
+
+generalSettings:
+   worlds: [world, world_nether] #Put all the world names here where you want to use the Level system, has to be the EXACT same name as the folder of the world
+   worldLocations:
+
+      world: #start again here with the EXACT name of a world you listed in the list above!
+         centralSpawns: [spawn1, spawn2] #add any amount of spawns, you have to keep the name so the next would be spawn3, spawn4, spawn5 etc....
+         spawnLocations: #list all the locations you added to the list above below here just like the example i put there for you
+            spawn1:
+               x: 100
+               y: 100
+               z: 100
+            spawn2:
+               x: 500
+               y: 100
+               z: 500
+
+      world_nether:
+         centralSpawns: [spawn1, spawn2]
+         spawnLocations:
+            spawn1:
+               x: 100
+               y: 100
+               z: 100
+            spawn2:
+               x: 500
+               y: 100
+               z: 500
+
+zombie:
+   giants:
+      enabled: true #Enabled Giants
+      chance: 2% #Chance from a normal Zombie spawn that a Giant spawns
+      level: 10 #Level after which they start to appear
+   armor:
+      enabled: true #Enable Zombies from spawning with armor
+      chance: 20% #Chance that this happens from a normal Zombie spawn
+      level: 20 #Number of levels after which it increases in tier so 1LVL-20LVL --> nothing, 21LVL-40LVL --> Leather etc
+      dropArmor: #This is not yet implemented but will be in the next version!
+         enabled: true
+         leatherDropChance:
+            helm: 5%
+            chest: 5%
+            legs: 5%
+            boots: 5%
+            sword: 5%
+         ironDropChance:
+            helm: 10%
+            chest: 10%
+            legs: 10%
+            boots: 10%
+            sword: 10%
+         goldDropChance:
+            helm: 15%
+            chest: 15%
+            legs: 15%
+            boots: 15%
+            sword: 15%
+         diamondDropChance:
+            helm: 20%
+            chest: 20%
+            legs: 20%
+            boots: 20%
+            sword: 20%
+skeleton:
+   armor:
+      enabled: true #Enable Skeletons from spawning with armor
+      chance: 20% #Chance that this happens from a normal Skeleton spawn
+      level: 10 #Number of levels after which it increases in tier so 1LVL-20LVL --> nothing, 21LVL-40LVL --> Leather etc
+      elite:
+         enabled: true #Enables the "ELITE" skeletons, Wither skeletons with enchanted gear
+         chance: 10% #Chance that one spawns from armored skeleton spawns, in this case 10% from the 20% which is 2% of all skeleton spawns
+      dropArmor: #Not yes implemented, will be next version!
+         enabled: true
+         leatherDropChance:
+            helm: 5%
+            chest: 5%
+            legs: 5%
+            boots: 5%
+            sword: 5%
+         ironDropChance:
+            helm: 10%
+            chest: 10%
+            legs: 10%
+            boots: 10%
+            sword: 10%
+         goldDropChance:
+            helm: 15%
+            chest: 15%
+            legs: 15%
+            boots: 15%
+            sword: 15%
+         diamondDropChance:
+            helm: 20%
+            chest: 20%
+            legs: 20%
+            boots: 20%
+            sword: 20%
+#Note that all Elites will spawn above the highest armor tier!
